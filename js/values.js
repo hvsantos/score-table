@@ -1,0 +1,1 @@
+const score_list = []

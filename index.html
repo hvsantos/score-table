@@ -1,1 +1,48 @@
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="main-wrapper">
+      <h1>Crie suas tabelas</h1>
+      <h2>Utilize o menu a seguir para configurar sua tabela</h2>
+      <form>
+        <!-- visible, desativado apos o começar -->
+        <label>Aperte o botão para começar</label>
+        <button onclick="startMenu()">Começar!</button>
+      </form>
+      <article>
+        <!-- hidden, ativado após o começar -->
+        <h1>Multiplicador</h1>
+        <form>
+          <label>Vitoria</label>
+          <input id="winMult" type="number" />
+        </form>
+        <form>
+          <label>Empate</label>
+          <input id="drawMult" type="number" />
+        </form>
+        <form>
+          <label>Derrota</label>
+          <input id="defeatMult" type="number" />
+        </form>
+      </article>
+    </section>
+    <button>
+      <!-- hidden, ativado após o começar -->
+      Criar nova tabela
+    </button>
+    <section>
+      <!-- hidden, ativado após o criar nova tabela -->
+      <h1>Tabela de Pontuação</h1>
+      <input placeholder="Nome do Jogo ou Titulo" />
+      <div id="tableLocation"></div>
+    </section>
+    <script src="js/values.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
