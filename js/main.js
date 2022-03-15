@@ -13,22 +13,23 @@ function generateTable() {
       <td>${score_list[i].defeat}</td>
       <td>${points}</td>
       <td><button class="main-button -prow" onClick="addWin(${i})">Vitória</button></td>
-      <td><button class="main-button -prow" onClick="addDraw(${i})">Empate</button></td>
+      <td><button class="main-button -prow" onClick="addDraw()">Empate</button></td>
       <td><button class="main-button -prow" onClick="addDefeat(${i})">Derrota</button></td>
       </tr>`
     points = 0
   }
   checkWinDefeat()
-  // checkDraw()
 }
 
 function addWin(index) {
   score_list[index].win += 1
   generateTable()
 }
-function addDraw(index) {
-  score_list[index].draw += 1
-  generateTable()
+function addDraw() {
+  for (let i = 0; i < score_list.length; i++) {
+    score_list[i].draw += 1
+  }
+  checkDraw()
 }
 function addDefeat(index) {
   score_list[index].defeat += 1
