@@ -30,18 +30,18 @@
       <article class="wrapper-mult">
         <h2 id="error-msg" class="main-subtitle"></h2>
         <input id="input-title" class="main-subtitle -small start-hidden" placeholder="Nome do Jogo ou Titulo" hidden/>
-        <h1 class="main-subtitle start-hidden" hidden>Multiplicador</h1>
-        <div class="start-hidden" hidden>
-          <label class="labelMult main-subtitle -small start-hidden" >Vitória</label>
-          <input id="winMult" class="inputMult main-subtitle -small start-hidden" type="number"/>
+        <h1 class="main-subtitle change-value" hidden>Multiplicador</h1>
+        <div class="change-value" hidden>
+          <label class="labelMult main-subtitle -small" >Vitória</label>
+          <input id="winMult" class="inputMult main-subtitle -small" type="number" placeholder = "1"/>
         </div>
-        <div class="start-hidden" hidden>
-          <label class="labelMult main-subtitle -small start-hidden">Empate</label>
-          <input id="drawMult" class="inputMult main-subtitle -small start-hidden" type="number"/>
+        <div class="change-value" hidden>
+          <label class="labelMult main-subtitle -small">Empate</label>
+          <input id="drawMult" class="inputMult main-subtitle -small" type="number" placeholder = "0.5"/>
         </div>
-        <div class="start-hidden" hidden>
-          <label class="labelMult main-subtitle -small start-hidden">Derrota</label>
-          <input id="defeatMult" class="inputMult main-subtitle -small start-hidden" type="number"/>
+        <div class="change-value" hidden>
+          <label class="labelMult main-subtitle -small">Derrota</label>
+          <input id="defeatMult" class="inputMult main-subtitle -small" type="number" placeholder = "-1"/>
         </div>
         <button id="button-refresh"class="main-button main-subtitle -small" hidden>Atualizar</button>
       </article>
@@ -49,8 +49,8 @@
         Criar nova tabela
       </button>
       <button id="new-player" class="main-button main-subtitle -small" hidden>Adicionar Novo Jogador</button>
-      <input id=""class="main-subtitle -small" type="text" placeholder="Nome Do Jogador" hidden>
-      <button class="main-button main-subtitle -small" hidden>Adicionar</button>
+      <input id="input-new"class="main-subtitle -small addplayer" type="text" placeholder="Nome Do Jogador" hidden>
+      <button id="button-new"class="main-button main-subtitle -small addplayer" hidden>Adicionar</button>
       <article class="wrapper-table">
         <table class="table-score main-subtitle -small new-table" hidden>
           <thead>
@@ -72,5 +72,6 @@
     <script src="js/main.js"></script>
     <script src="js/newtable.js"></script>
     <script src="js/newplayer.js"></script>
+    <script src="js/check.js"></script>
   </body>
 </html>
