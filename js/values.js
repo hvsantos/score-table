@@ -16,7 +16,7 @@ function refreshValueWin() {
   if (win_value == '') {
     win_value = 0
   }
-  document.querySelector('#refresh-button').removeAttribute('hidden')
+  document.querySelector('#button-refresh').removeAttribute('hidden')
 }
 
 function refreshValueDraw() {
@@ -24,7 +24,7 @@ function refreshValueDraw() {
   if (draw_value == '') {
     draw_value = 0
   }
-  document.querySelector('#refresh-button').removeAttribute('hidden')
+  document.querySelector('#button-refresh').removeAttribute('hidden')
 }
 
 function refreshValueDefeat() {
@@ -32,5 +32,5 @@ function refreshValueDefeat() {
   if (defeat_value == '') {
     defeat_value = 0
   }
-  document.querySelector('#refresh-button').removeAttribute('hidden')
+  document.querySelector('#button-refresh').removeAttribute('hidden')
 }

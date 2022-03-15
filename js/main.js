@@ -1,3 +1,3 @@
-function genTable() {
-  document.querySelector('#refresh-button').setAttribute('hidden', '')
-}
+// function genTable() {
+//   document.querySelector('#refresh-button').setAttribute('hidden', '')
+// }
