@@ -18,43 +18,41 @@
   </head>
   <body>
     <section class="main-wrapper">
-      <h1 class="main-title">Tabela de Pontuação</h1>
-      <h2 class="main-subtitle">Crie e configure sua tabela</h2>
+      <h1 id="main-title" class="main-title">Tabela de Pontuação</h1>
+      <h2 id="main-subtitle" class="main-subtitle">Crie e configure sua tabela</h2>
+      <h2 id="title-table"class="main-title new-table" hidden>Titulo</h2>
       <form class="form-start">
-        <!-- visible, desativado apos o começar -->
-        <label class="main-subtitle -small">Aperte o botão para começar</label>
-        <button class="main-button main-subtitle -small" onclick="startMenu()">
+        <label id="label-start" class="main-subtitle -small">Aperte o botão para começar</label>
+        <button id="button-start" class="main-button main-subtitle -small">
           Começar!
         </button>
       </form>
       <article class="wrapper-mult">
-        <!-- hidden, ativado após o começar -->
-        <input class="main-subtitle -small" placeholder="Nome do Jogo ou Titulo" hidden/>
-        <h1 class="main-subtitle" hidden>Multiplicador</h1>
-        <div>
-          <label class="labelMult main-subtitle -small" >Vitória</label>
-          <input id="winMult" class="inputMult main-subtitle -small" type="number"/>
+        <h2 id="error-msg" class="main-subtitle"></h2>
+        <input id="input-title" class="main-subtitle -small start-hidden" placeholder="Nome do Jogo ou Titulo" hidden/>
+        <h1 class="main-subtitle start-hidden" hidden>Multiplicador</h1>
+        <div class="start-hidden" hidden>
+          <label class="labelMult main-subtitle -small start-hidden" >Vitória</label>
+          <input id="winMult" class="inputMult main-subtitle -small start-hidden" type="number"/>
         </div>
-        <div hidden>
-          <label class="labelMult main-subtitle -small">Empate</label>
-          <input id="drawMult" class="inputMult main-subtitle -small" type="number"/>
+        <div class="start-hidden" hidden>
+          <label class="labelMult main-subtitle -small start-hidden">Empate</label>
+          <input id="drawMult" class="inputMult main-subtitle -small start-hidden" type="number"/>
         </div>
-        <div hidden>
-          <label class="labelMult main-subtitle -small">Derrota</label>
-          <input id="defeatMult" class="inputMult main-subtitle -small" type="number"/>
+        <div class="start-hidden" hidden>
+          <label class="labelMult main-subtitle -small start-hidden">Derrota</label>
+          <input id="defeatMult" class="inputMult main-subtitle -small start-hidden" type="number"/>
         </div>
-        <button id="refresh-button"class="main-button main-subtitle -small" onclick="genTable()" hidden>Atualizar</button>
+        <button id="button-refresh"class="main-button main-subtitle -small" hidden>Atualizar</button>
       </article>
-      <button class="main-button main-subtitle -small" hidden>
-        <!-- hidden, ativado após o começar -->
+      <button id="button-newtable" class="main-button main-subtitle -small start-hidden" hidden>
         Criar nova tabela
       </button>
+      <button id="new-player" class="main-button main-subtitle -small" hidden>Adicionar Novo Jogador</button>
+      <input id=""class="main-subtitle -small" type="text" placeholder="Nome Do Jogador" hidden>
+      <button class="main-button main-subtitle -small" hidden>Adicionar</button>
       <article class="wrapper-table">
-        <!-- hidden, ativado após o criar nova tabela -->
-        <h1 class="main-title" hidden>Tabela</h1>
-        <h2 class="main-subtitle" hidden>Titulo</h2>
-        <!-- hidden, ativado após inserir um titulo -->
-        <table class="table-score main-subtitle -small" hidden>
+        <table class="table-score main-subtitle -small new-table" hidden>
           <thead>
             <tr class="head">
               <th>Nome</th>
@@ -67,9 +65,12 @@
           </thead>
           <tbody id="player-rows">
           </tbody>
-      </article>
+        </article>
     </section>
     <script src="js/values.js"></script>
+    <script src="js/menu.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/newtable.js"></script>
+    <script src="js/newplayer.js"></script>
   </body>
 </html>
