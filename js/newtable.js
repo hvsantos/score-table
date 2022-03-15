@@ -11,6 +11,10 @@ function newTable() {
     table_title.setAttribute('hidden', '')
     document.querySelector('#title-table').innerHTML = `${table_title.value}`
     document.querySelector('#main-subtitle').setAttribute('hidden', '')
+    let arrayChangevalue = document.querySelectorAll('.change-value')
+    for (let i = 0; i < arrayChangevalue.length; i++) {
+      arrayChangevalue[i].removeAttribute('hidden')
+    }
     let arrayMenu = document.querySelectorAll('.new-table')
     for (let i = 0; i < arrayMenu.length; i++) {
       arrayMenu[i].removeAttribute('hidden')
