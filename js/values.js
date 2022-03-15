@@ -3,9 +3,9 @@ const winInput = document.querySelector('#winMult')
 const drawInput = document.querySelector('#drawMult')
 const defeatInput = document.querySelector('#defeatMult')
 
-let win_value = 0
-let draw_value = 0
-let defeat_value = 0
+let win_value = 1
+let draw_value = 0.5
+let defeat_value = -1
 
 winInput.addEventListener('input', refreshValueWin)
 drawInput.addEventListener('input', refreshValueDraw)
@@ -16,6 +16,7 @@ function refreshValueWin() {
   if (win_value == '') {
     win_value = 0
   }
+  generateTable()
   document.querySelector('#button-refresh').removeAttribute('hidden')
 }
 
@@ -24,6 +25,7 @@ function refreshValueDraw() {
   if (draw_value == '') {
     draw_value = 0
   }
+  generateTable()
   document.querySelector('#button-refresh').removeAttribute('hidden')
 }
 
@@ -32,5 +34,6 @@ function refreshValueDefeat() {
   if (defeat_value == '') {
     defeat_value = 0
   }
+  generateTable()
   document.querySelector('#button-refresh').removeAttribute('hidden')
 }
