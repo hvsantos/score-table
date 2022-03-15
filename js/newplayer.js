@@ -7,6 +7,7 @@ function newPlayer(event) {
     arrayMenu[i].removeAttribute('hidden')
   }
   button_newp.setAttribute('hidden', '')
+  document.querySelector('#button-reset').setAttribute('hidden', '')
 }
 
 const input_new = document.querySelector('#input-new')
@@ -14,6 +15,7 @@ const button_pushnew = document.querySelector('#button-new')
 button_pushnew.addEventListener('click', submitNewPlayer)
 function submitNewPlayer(event) {
   event.preventDefault()
+  document.querySelector('#button-reset').removeAttribute('hidden')
   inputname = input_new.value
   score_list.push({
     player: `${inputname}`,

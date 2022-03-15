@@ -1,4 +1,13 @@
 const score_list = []
+
+function resetFunction() {
+  let count = score_list.length
+  for (let i = 0; i < count; i++) {
+    score_list.pop()
+  }
+  generateTable()
+}
+
 const winInput = document.querySelector('#winMult')
 const drawInput = document.querySelector('#drawMult')
 const defeatInput = document.querySelector('#defeatMult')
