@@ -23,6 +23,11 @@ body {
   padding-top: 4rem;
   gap: 1rem;
 }
+.form-start {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
 .wrapper-mult {
   display: flex;
   flex-direction: column;

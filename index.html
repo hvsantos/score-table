@@ -31,18 +31,19 @@
         <!-- hidden, ativado após o começar -->
         <input class="main-subtitle -small" placeholder="Nome do Jogo ou Titulo" hidden/>
         <h1 class="main-subtitle" hidden>Multiplicador</h1>
-        <form class="container-mult" hidden>
-          <label class="labelMult main-subtitle -small">Vitória</label>
-          <input id="winMult" class="inputMult main-subtitle -small" type="number" />
-        </form>
-        <form class="container-mult" hidden>
+        <div>
+          <label class="labelMult main-subtitle -small" >Vitória</label>
+          <input id="winMult" class="inputMult main-subtitle -small" type="number"/>
+        </div>
+        <div hidden>
           <label class="labelMult main-subtitle -small">Empate</label>
-          <input id="drawMult" class="inputMult main-subtitle -small" type="number" />
-        </form>
-        <form class="container-mult" hidden>
+          <input id="drawMult" class="inputMult main-subtitle -small" type="number"/>
+        </div>
+        <div hidden>
           <label class="labelMult main-subtitle -small">Derrota</label>
-          <input id="defeatMult" class="inputMult main-subtitle -small" type="number" />
-        </form>
+          <input id="defeatMult" class="inputMult main-subtitle -small" type="number"/>
+        </div>
+        <button id="refresh-button"class="main-button main-subtitle -small" onclick="genTable()" hidden>Atualizar</button>
       </article>
       <button class="main-button main-subtitle -small" hidden>
         <!-- hidden, ativado após o começar -->
